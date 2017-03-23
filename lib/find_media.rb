@@ -2,9 +2,9 @@
 
 module FINDMEDIA
 
-def self.videos
-	puts "#{ENV['HOMEDRIVE']}#{ENV['HOMEPATH'].gsub /\\/, '/'}/videos/**/*.mts"
-	Dir["#{ENV['HOMEDRIVE']}#{ENV['HOMEPATH'].gsub /\\/, '/'}/videos/**/*.MTS"]
+def self.videos(dir = "#{ENV['HOMEDRIVE']}#{ENV['HOMEPATH'].gsub(/\\/, '/')}/videos")
+	puts "#{dir}/**/*.MTS" if $verbose
+	Dir["#{dir}/**/*.MTS"]
 end
 
 

@@ -100,4 +100,7 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+require 'find_media'
+require 'awesome_print'
 end

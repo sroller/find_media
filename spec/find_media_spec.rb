@@ -1,7 +1,30 @@
-describe "it runs" do
-  it "1 == 1" do
-    expect(1).to eq(1)
-  end
+require 'spec_helper.rb'
+
+describe "find video files" do
+
+	it "returns a list of files from HOME" do
+		expect(FINDMEDIA::videos("C:/Users/steffenr.OPENTEXT/videos").size).to be > 0
+	end
+
+	it "returns a list of files from HOME" do
+		expect(FINDMEDIA::videos.size).to be > 0
+	end
+
+	it "can access elements of the returned array" do
+		va = FINDMEDIA::videos
+		ap File.stat(va.first)
+		expect(File.stat(va.first))
+	end
+
+end
+
+describe "get file info" do
+
+	xit "gives statinfos" do
+	end
+end
+
+describe "running with tags" do
 
   it "does nothing" do
     # pass
@@ -12,6 +35,6 @@ describe "it runs" do
   end
 
   it "does not have a tag" do
-    fail
+    # fail
   end
 end
