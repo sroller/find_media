@@ -8,4 +8,4 @@ gem "sequel"
 gem "guard"
 gem "rspec"
 gem "rake"
-
+gem "minitest"
