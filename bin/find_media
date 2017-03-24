@@ -2,3 +2,4 @@
 
 require 'find_media'
 
+puts __FILE__

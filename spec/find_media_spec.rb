@@ -16,11 +16,15 @@ describe "find video files" do
 		expect(File.stat(va.first))
 	end
 
+	it "creates an MD5 digest of a file" do
+		expect(FINDMEDIA::digest(__FILE__)).to be_a String
+  end
+
 end
 
 describe "get file info" do
 
-	xit "gives statinfos" do
+	it "gives statinfos" do
 	end
 end
 
